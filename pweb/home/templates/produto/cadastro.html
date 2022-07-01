@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block titulo %}Cadastro de Produto{% endblock %}
+{% block h1 %} Cadastro de Produto {% endblock %}
+{% block conteudo %}
+
+{{agora}}
+<form method="POST">
+    {% csrf_token %}
+    <fieldset>
+        <legend>Dados do Produto</legend>
+        {{form.as_p}}
+        <button type="submit">Salvar</button>
+    </fieldset>
+</form>
+{% endblock %}

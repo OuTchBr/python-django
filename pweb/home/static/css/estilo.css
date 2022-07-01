@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 0;
+    max-width: 900px;
+    margin: auto;
+    text-decoration: none;
+}
+
+.cabecalho {
+    background-color: orange;
+    padding: 5px;
+}
+
+
+.conteudo {
+    background-color: #f2f2f2;
+    padding: 5px;
+    float: center;
+    width: 100%;
+}
+
+.foto-prod{
+    max-width: 50px;
+    justify-content: center;
+}
+
+.teste a{
+    text-decoration: none;
+    color: black;
+    margin: 5px 0;
+}
+
+.teste {
+    display: flex;
+    flex: 1;
+    align-content: center;
+    justify-content: space-between;
+    margin: auto;
+}
+

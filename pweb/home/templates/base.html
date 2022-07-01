@@ -1,0 +1,56 @@
+{% load static %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% bootstrap_messages %}
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>{% block titulo %} {% endblock %}</title>	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+	<!--material icons-->
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+	<link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+</head>
+<body>
+    <div class="cabecalho">
+        Meu Sistema
+	</div>
+
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+		<!-- Brand -->
+		<a class="navbar-brand" href="#">Muamba</a>
+	  
+		<!-- Toggler/collapsibe Button -->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+	  
+		<!-- Navbar links -->
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+		  <ul class="navbar-nav">
+			<li class="nav-item">
+			  <a class="nav-link" href="{% url 'index' %}">Home</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="{% url 'lista_produtos' %}">Produtos</a>
+			</li>
+		  </ul>
+		</div>
+	</nav>
+
+	
+    <div class="conteudo">
+		<h1>{% block h1 %} {% endblock %}</h1>
+        {% block conteudo %}
+
+        {% endblock %}
+    </div>
+
+
+	</body>
+</html>

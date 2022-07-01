@@ -1,0 +1,17 @@
+{% block h1 %} Remoção de Produto {% endblock %}
+
+
+{% block conteudo %}
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset>
+            <legend>Deseja realmente remover esse produto?</legend>
+            Nome:{{produto.nome}} <br> <br>
+            <button type="submit">Remover</button>
+            <a href="{% url 'lista_produtos' %}">
+                <input type="button" value="Cancelar" />
+            </a>
+            
+        </fieldset>
+    </form>
+{% endblock %}
